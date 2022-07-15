@@ -5,6 +5,7 @@ using System.Text.Json;
 using System.IO;
 using System.Collections.ObjectModel;
 using System.Linq;
+using Newtonsoft.Json.Serialization;
 
 namespace Resume_Creator__PDF_
 {
@@ -16,7 +17,6 @@ namespace Resume_Creator__PDF_
             InitializeComponent();
             string file = @"C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume1.json";
             string JsonInfo = File.ReadAllText(file);
-
         }
 
         public class Resume
@@ -35,7 +35,7 @@ namespace Resume_Creator__PDF_
             public string Skill5 { get; set; }
             public string College { get; set; }
             public string CollegeStatus { get; set; }
-            public string SeniorHighScgool { get; set; }
+            public string SeniorHighSchool { get; set; }
             public string SeniorHighSchoolStatus { get; set; }
             public string JuniorHighSchool { get; set; }
             public string JuniorHighSchoolStatus { get; set; }
@@ -46,6 +46,35 @@ namespace Resume_Creator__PDF_
 
         private void btnGeneratePDF_Click(object sender, EventArgs e)
         {
+            string file = "Resume1.json";
+            string JsonFile;
+            using (var reader = new StreamReader(file))
+            {
+                JsonFile = reader.ReadToEnd();
+            }
+            var Resume = JsonConvert.DeserializeObject<Resume>(JsonFile);
+
+            string FirstName = Resume.FirstName;
+            string MiddleName = Resume.MiddleInitial;
+            string Surname = Resume.LastName;
+            string Email = Resume.Email;
+            string Address = Resume.CompleteAddress;
+            string Zipcode = Resume.ZipCode;
+            string ContactNumber = Resume.ContactNumber;
+            string Skill1 = Resume.Skill1;
+            string Skill2 = Resume.Skill2;
+            string Skill3 = Resume.Skill3;
+            string Skill4 = Resume.Skill4;
+            string Skill5 = Resume.Skill5;
+            string College = Resume.College;
+            string CollegeStatus = Resume.CollegeStatus;
+            string SeniorHighSchool = Resume.SeniorHighSchool;
+            string SeniorHighSchoolStatus = Resume.SeniorHighSchoolStatus;
+            string JuniorHighSchool = Resume.JuniorHighSchool;
+            string JuniorHighSchoolStatus = Resume.JuniorHighSchoolStatus;
+            string Coursework1 = Resume.Coursework1;
+            string Coursework2 = Resume.Coursework2;
+            string Coursework3 = Resume.Coursework3;
         }
     }
 }
