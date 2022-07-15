@@ -1,0 +1,19 @@
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\bin\Debug\net6.0-windows\Resume Creator (PDF).exe
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\bin\Debug\net6.0-windows\Resume Creator (PDF).deps.json
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\bin\Debug\net6.0-windows\Resume Creator (PDF).runtimeconfig.json
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\bin\Debug\net6.0-windows\Resume Creator (PDF).dll
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\bin\Debug\net6.0-windows\Resume Creator (PDF).pdb
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\obj\Debug\net6.0-windows\Resume Creator (PDF).csproj.AssemblyReference.cache
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\obj\Debug\net6.0-windows\Resume_Creator__PDF_.Form1.resources
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\obj\Debug\net6.0-windows\Resume Creator (PDF).csproj.GenerateResource.cache
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\obj\Debug\net6.0-windows\Resume Creator (PDF).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\obj\Debug\net6.0-windows\Resume Creator (PDF).AssemblyInfoInputs.cache
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\obj\Debug\net6.0-windows\Resume Creator (PDF).AssemblyInfo.cs
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\obj\Debug\net6.0-windows\Resume Creator (PDF).csproj.CoreCompileInputs.cache
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\obj\Debug\net6.0-windows\Resume Creator (PDF).csproj.CopyComplete
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\obj\Debug\net6.0-windows\Resume Creator (PDF).dll
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\obj\Debug\net6.0-windows\refint\Resume Creator (PDF).dll
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\obj\Debug\net6.0-windows\Resume Creator (PDF).pdb
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\obj\Debug\net6.0-windows\Resume Creator (PDF).genruntimeconfig.cache
+C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume Creator (PDF)\obj\Debug\net6.0-windows\ref\Resume Creator (PDF).dll

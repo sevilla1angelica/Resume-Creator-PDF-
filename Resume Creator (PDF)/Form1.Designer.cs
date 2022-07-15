@@ -1,6 +1,6 @@
 ﻿namespace Resume_Creator__PDF_
 {
-    partial class Form1
+    partial class ResumeForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // ResumeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 328);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(702, 470);
+            this.Name = "ResumeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resume Creator (PDF)";
             this.ResumeLayout(false);

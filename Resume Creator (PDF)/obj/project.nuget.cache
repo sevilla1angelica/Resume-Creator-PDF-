@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nucrPFP7Py37jpadj9pyjzZb14tIfaga5bOTIcJXu1F2Gci46htqPSNFfXrRgryayN8ijh2FEtdoiFRfVaBkuA==",
+  "dgSpecHash": "kYdgil1xV5AvfmkrUlVvNSfhaGO+FXdEQuPR5yIbtgzKfc2O7NuM2t5jokzOQxvAbw8saOHbIkS1xukmtxxLhg==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\OneDrive\\Desktop\\C# Programs\\Resume Creator (PDF)\\Resume Creator (PDF)\\Resume Creator (PDF).csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
