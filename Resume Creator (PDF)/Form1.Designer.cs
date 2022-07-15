@@ -54,6 +54,7 @@
             this.lblSkill4 = new System.Windows.Forms.Label();
             this.lblSkill5 = new System.Windows.Forms.Label();
             this.lblZipCode = new System.Windows.Forms.Label();
+            this.btnGeneratePDF = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -328,13 +329,26 @@
             this.lblZipCode.TabIndex = 24;
             this.lblZipCode.Text = "Zip Code:";
             // 
+            // btnGeneratePDF
+            // 
+            this.btnGeneratePDF.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnGeneratePDF.Font = new System.Drawing.Font("Cascadia Code SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGeneratePDF.Location = new System.Drawing.Point(308, 664);
+            this.btnGeneratePDF.Name = "btnGeneratePDF";
+            this.btnGeneratePDF.Size = new System.Drawing.Size(172, 23);
+            this.btnGeneratePDF.TabIndex = 25;
+            this.btnGeneratePDF.Text = "Generate (PDF file)";
+            this.btnGeneratePDF.UseVisualStyleBackColor = true;
+            this.btnGeneratePDF.Click += new System.EventHandler(this.btnGeneratePDF_Click);
+            // 
             // ResumeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(488, 681);
+            this.ClientSize = new System.Drawing.Size(488, 695);
+            this.Controls.Add(this.btnGeneratePDF);
             this.Controls.Add(this.lblZipCode);
             this.Controls.Add(this.lblSkill5);
             this.Controls.Add(this.lblSkill4);
@@ -396,5 +410,6 @@
         private Label lblSkill4;
         private Label lblSkill5;
         private Label lblZipCode;
+        private Button btnGeneratePDF;
     }
 }
