@@ -24,7 +24,6 @@ namespace Resume_Creator__PDF_
 {
     public partial class ResumeForm : Form
     {
-        //string file = @"C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume1.json";
         public ResumeForm()
         {
             InitializeComponent();
@@ -112,11 +111,9 @@ namespace Resume_Creator__PDF_
 
         private void btnGeneratePDF_Click(object sender, EventArgs e)
         {
-            //string file = "Resume1.json";
             string file = File.ReadAllText(@"C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\Resume1.json");
 
             var Resume = JsonConvert.DeserializeObject<Resume>(file);
-            //Resume Resume = JsonSerializer.Deserialize<Resume>(JsonFile);
 
             string firstname = Resume.FirstName;
             string middleinitial = Resume.MiddleInitial;
@@ -141,7 +138,6 @@ namespace Resume_Creator__PDF_
             string coursework3 = Resume.Coursework3;
 
 
-
             using (SaveFileDialog saveFile = new SaveFileDialog() { Filter = "PDF File|*.pdf" })
             {
                 saveFile.InitialDirectory = @"C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)";
@@ -159,6 +155,7 @@ namespace Resume_Creator__PDF_
 
                     XFont bigfont = new XFont("Century Gothic", 14, XFontStyle.Bold);
                     XFont smallfont = new XFont("Century Gothic", 12, XFontStyle.Italic);
+                    XFont namefont = new XFont("Century Gothic", 18, XFontStyle.Bold);
                     XFont headfont = new XFont("Century Gothic", 30, XFontStyle.Bold);
 
                     XPen pen = new XPen(XColors.Black, 20);
@@ -168,25 +165,27 @@ namespace Resume_Creator__PDF_
                     graphics.DrawRoundedRectangle(XBrushes.Gray, 0, 0, page.Width.Point, page.Height.Point, 0, 0);
                     graphics.DrawRectangle(pen, 0, 0, page.Width.Point, page.Height.Point);
 
-                    graphics.DrawString("RESUME", headfont, XBrushes.Black, new XRect(0, 20, page.Width.Point - 20, page.Height.Point - 80),XStringFormat.TopCenter);
+                    graphics.DrawString("RESUME", headfont, XBrushes.Black, new XRect(0, 50, page.Width.Point - 20, page.Height.Point - 80),XStringFormat.TopCenter);
 
                     int marginleft = 25;
                     int initialleft = 150;
                     int marginright = 390;
                     int initialright = 100;
 
-                    graphics.DrawString(firstname, bigfont, XBrushes.Black, new XRect(marginleft, initialleft + 1, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
-                    graphics.DrawString(middleinitial, bigfont, XBrushes.Black, new XRect(marginleft, initialleft + 15, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
-                    graphics.DrawString(lastname, bigfont, XBrushes.Black, new XRect(marginleft, initialleft + 30, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
+                    string png = @"C:\Users\HP\OneDrive\Desktop\C# Programs\Resume Creator (PDF)\ID_resume.png";
+                    XImage image = XImage.FromFile(png);
+                    graphics.DrawImage(image, 385, 120, 175, 175);
+
+                    graphics.DrawString(firstname, namefont, XBrushes.Black, new XRect(marginleft, initialleft + 1, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
+                    graphics.DrawString(middleinitial, namefont, XBrushes.Black, new XRect(marginleft, initialleft + 15, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
+                    graphics.DrawString(lastname, namefont, XBrushes.Black, new XRect(marginleft, initialleft + 30, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
 
                     graphics.DrawRectangle(lineforleft, marginleft, initialleft + 65, 160, 1);
 
-                    graphics.DrawString("Email : " + email, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 70, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
+                    graphics.DrawString("Email :" + email, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 70, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
                     graphics.DrawString("Contact Number : " + contactnumber, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 85, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
                     graphics.DrawString("Address : " + address, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 100, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
                     graphics.DrawString("Zip Code : " + zipcode, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 115, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
-
-                    //graphics.DrawRectangle(lineforleft, marginleft, initialleft + 145, 130, 1);
 
                     graphics.DrawString("Education Background : ", bigfont, XBrushes.Black, new XRect(marginleft, initialleft + 155, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
                     graphics.DrawRectangle(lineforleft, marginleft, initialleft + 170, 160, 1);
@@ -200,8 +199,6 @@ namespace Resume_Creator__PDF_
                     graphics.DrawString(juniorhighschool, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 290, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
                     graphics.DrawString(juniorhighstatus, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 305, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
 
-                    //graphics.DrawRectangle(lineforleft, marginleft, initialleft + 325, 130, 1);
-
                     graphics.DrawString("Skills : ", bigfont, XBrushes.Black, new XRect(marginleft, initialleft + 335, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
                     graphics.DrawRectangle(lineforleft, marginleft, initialleft + 350, 160, 1);
                     graphics.DrawString(skill1, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 355, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
@@ -210,8 +207,6 @@ namespace Resume_Creator__PDF_
                     graphics.DrawString(skill4, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 400, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
                     graphics.DrawString(skill5, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 415, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
 
-                    //graphics.DrawRectangle(lineforright, marginleft, initialleft + 450, 130, 1);
-                    //put this on the right side
                     graphics.DrawString("Coursework Related : ", bigfont, XBrushes.Black, new XRect(marginright, initialright + 205, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
                     graphics.DrawRectangle(lineforright, marginright, initialright + 220, 130, 1);
                     graphics.DrawString(coursework1, smallfont, XBrushes.Black, new XRect(marginright, initialright + 230, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
@@ -219,7 +214,7 @@ namespace Resume_Creator__PDF_
                     graphics.DrawString(coursework3, smallfont, XBrushes.Black, new XRect(marginright, initialright + 260, page.Width.Point, page.Height.Point), XStringFormat.TopLeft);
 
                     pdf.Save(saveFile.FileName);
-                    MessageBox.Show("It's a success!");
+                    MessageBox.Show("You have generated your JSON File to PDF. Please do proceed to the folder. Thank you! ","It's a success!");
                 }
             }
         }
