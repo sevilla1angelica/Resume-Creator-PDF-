@@ -343,7 +343,7 @@
             // 
             this.btnGeneratePDF.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnGeneratePDF.Font = new System.Drawing.Font("Cascadia Code SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnGeneratePDF.Location = new System.Drawing.Point(308, 664);
+            this.btnGeneratePDF.Location = new System.Drawing.Point(333, 609);
             this.btnGeneratePDF.Name = "btnGeneratePDF";
             this.btnGeneratePDF.Size = new System.Drawing.Size(172, 23);
             this.btnGeneratePDF.TabIndex = 25;
